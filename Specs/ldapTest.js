@@ -98,6 +98,7 @@ fixture `Remove All LDAP Configs from SFAdmin`
 .page `${testMock.sfAdminUrl}`;
 test('Remove Ldap Configuration on SFAdmin',async RemoveConfig =>   {
     await RemoveConfig
+
         .typeText(loginPage.userName,testMock.sf_username)
         .typeText(loginPage.passWd,testMock.password)
         .click(loginPage.adminLoginButton)
@@ -109,27 +110,32 @@ test('Remove Ldap Configuration on SFAdmin',async RemoveConfig =>   {
         // Remove LDAP_URL
         .click(removeLdap.searchConfig).typeText(removeLdap.searchConfig,'LDAP_URL')
         .click(removeLdap.clickSearch)
+        .setNativeDialogHandler(() => true)
         .click(removeLdap.deleteConf)
 
         // Remove LDAP_SERVICE_USERNAME
         .click(removeLdap.searchConfig).typeText(removeLdap.searchConfig,'LDAP_SERVICE_USERNAME')
         .click(removeLdap.clickSearch)
+        .setNativeDialogHandler(() => true)
         .click(removeLdap.deleteConf)
 
         // Remove LDAP_SERVICE_PASSWORD
         .click(removeLdap.searchConfig).typeText(removeLdap.searchConfig,'LDAP_SERVICE_PASSWORD')
         .click(removeLdap.clickSearch)
+        .setNativeDialogHandler(() => true)
         .click(removeLdap.deleteConf)
 
         // Remove LDAP_FILTER
         .click(removeLdap.searchConfig).typeText(removeLdap.searchConfig,'LDAP_FILTER')
         .click(removeLdap.clickSearch)
+        .setNativeDialogHandler(() => true)
         .click(removeLdap.deleteConf)
 
 
         // Remove LDAP_BASE_DN
         .click(removeLdap.searchConfig).typeText(removeLdap.searchConfig,'LDAP_BASE_DN')
         .click(removeLdap.clickSearch)
+        .setNativeDialogHandler(() => true)
         .click(removeLdap.deleteConf)
 
         // Edit LDAP Local Login Strategy
@@ -138,6 +144,7 @@ test('Remove Ldap Configuration on SFAdmin',async RemoveConfig =>   {
         .click(addConLdap.selectLocalLogin)
         .click(addConLdap.addValueConf).pressKey('ctrl+a  delete delete delete delete').typeText(addConLdap.addValueConf,testMock.DefaultLoginStrategy)
         .click(addConLdap.saveConf)
+        .wait(10000)
 })
 
 fixture `Starfish should be in Default State`
