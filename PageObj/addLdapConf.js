@@ -9,7 +9,7 @@ export default class addConfig{
       this.clickOption      =  Selector('.options');
       this.clickConfig      =  Selector('[href="/starfish-admin-stageRC/admin/manageConfigs.html?id=4"]');
       this.addTenantConf    =  Selector('.secondary > :nth-child(1) > .ui');
-      this.enterTntConf     =  Selector('#tenant-config-form > :nth-child(1) > .ui > .dropdown');
+      // this.enterTntConf     =  Selector('.ui > .search');
       this.addTntConf       =  Selector('.ui > .search');
       this.addValueConf     =  Selector('#value');
       this.saveConf         =  Selector('.primary');

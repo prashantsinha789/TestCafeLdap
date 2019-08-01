@@ -1,9 +1,9 @@
+import { Selector } from 'testcafe';
 import loginPg from "../PageObj/loginPage"
 import mockData from "../Mocks/testMock"
 import addConfig from "../PageObj/addLdapConf"
 import testerToolPage from "../PageObj/testerTool"
 import RemoveConf from "../PageObj/removeLdapConfig"
-import { Selector } from 'testcafe';
 
 const loginPage    = new loginPg();
 const testMock     = new mockData();
@@ -25,35 +25,35 @@ test('Ldap Configuration on SFAdmin',async AddConf =>   {
 
         //add LDAP URL
         .click(addConLdap.addTenantConf)
-        .click(addConLdap.enterTntConf)
+        // .click(addConLdap.enterTntConf)
         .typeText(addConLdap.addTntConf,'LDAP_URL')
         .click(addConLdap.addValueConf).typeText(addConLdap.addValueConf,testMock.ldapUrl)
         .click(addConLdap.saveConf)
 
         //add LDAP Service Username
         .click(addConLdap.addTenantConf)
-        .click(addConLdap.enterTntConf)
+        // .click(addConLdap.enterTntConf)
         .typeText(addConLdap.addTntConf,'LDAP_SERVICE_USERNAME')
         .click(addConLdap.addValueConf).typeText(addConLdap.addValueConf,testMock.ldapServiceUsername)
         .click(addConLdap.saveConf)
 
         //add LDAP Service Password
         .click(addConLdap.addTenantConf)
-        .click(addConLdap.enterTntConf)
+        // .click(addConLdap.enterTntConf)
         .typeText(addConLdap.addTntConf,'LDAP_SERVICE_PASSWORD')
         .click(addConLdap.addValueConf).typeText(addConLdap.addValueConf,testMock.ldapServicePassword)
         .click(addConLdap.saveConf)
 
         // //add LDAP BaseDN
         .click(addConLdap.addTenantConf)
-        .click(addConLdap.enterTntConf)
+        // .click(addConLdap.enterTntConf)
         .typeText(addConLdap.addTntConf,'LDAP_BASE_DN')
         .click(addConLdap.addValueConf).typeText(addConLdap.addValueConf,testMock.ldapbasedn)
         .click(addConLdap.saveConf)
 
         // //add LDAP Filter
         .click(addConLdap.addTenantConf)
-        .click(addConLdap.enterTntConf)
+        // .click(addConLdap.enterTntConf)
         .typeText(addConLdap.addTntConf,'LDAP_FILTER')
         .click(addConLdap.addValueConf).typeText(addConLdap.addValueConf,testMock.ldapFilter)
         .click(addConLdap.saveConf)
