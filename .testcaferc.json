@@ -1,0 +1,11 @@
+{
+    "screenshotPath": "/home/prashant/Desktop/TestcafeWorkspace/TestCafeLdap/screenshots",
+    "takeScreenshotsOnFails": true,
+    "screenshotPathPattern": "${DATE}_${TIME}/test-${TEST_INDEX}/${USERAGENT}/${FILE_INDEX}.png"
+}
+{
+    "videoEncodingOptions": {
+        "r": 20,
+        "aspect": "4:3"
+    }
+}
